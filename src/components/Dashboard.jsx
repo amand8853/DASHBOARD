@@ -109,21 +109,28 @@ const Dashboard = () => {
                             <button className="dropdown-btn">Monthly ▼</button>
                         </div>
 
-                        <div className="balance-info">
-                            <h2 style={{ fontSize: "30px", fontWeight: "bold" }}>$120,000</h2>
-                            <span
-                                style={{
-                                    backgroundColor: "#e0f5e9",
-                                    color: "#2ecc71",
-                                    padding: "3px 8px",
-                                    borderRadius: "10px",
-                                    fontWeight: "bold",
-                                    marginLeft: "10px"
-                                }}
-                            >
-                                32%
-                            </span>
+                        <div className="balance-info" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <h2 style={{ fontSize: "30px", fontWeight: "bold", margin: 0 }}>$120,000</h2>
+
+                            <div style={{ display: 'flex', alignItems: 'center', backgroundColor: "#e0f5e9", padding: "3px 8px", borderRadius: "10px" }}>
+                                <span style={{ color: "#2ecc71", fontWeight: "bold", fontSize: "14px" }}>32%</span>
+                                <button
+                                    style={{
+                                        background: "transparent",
+                                        border: "none",
+                                        color: "#2ecc71",
+                                        fontWeight: "bold",
+                                        fontSize: "14px",
+                                        marginLeft: "5px",
+                                        cursor: "pointer"
+                                    }}
+                                >
+                                    ▼
+                                </button>
+                            </div>
                         </div>
+
+
 
                         <ResponsiveContainer width="100%" height={200}>
                             <LineChart data={data}>
@@ -202,8 +209,6 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-
-
                 <div className="right-column">
 
                     <div className="header-profile">

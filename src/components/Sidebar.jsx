@@ -6,12 +6,14 @@ import 'font-awesome/css/font-awesome.min.css'; // Importing FontAwesome CSS
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-            <div className="sidebar-logo">
+            <div className="sidebar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <img
                     src="https://media.licdn.com/dms/image/v2/D4D0BAQGtFo8gKSzLDA/company-logo_200_200/company-logo_200_200/0/1738831295293/itio_innovex_logo?e=2147483647&v=beta&t=8LkuPyv7luIhdRFFYAQz8z37qb9_Lu-NjYbdcH2X3Rc"
                     alt="Itio Innovex Logo"
                     className="logo"
+                    style={{ width: '50px', height: '50px', borderRadius: '50%' }}
                 />
+                <span style={{ fontWeight: 'bold', fontSize: '18px', color: '#000' }}>ITIO</span>
             </div>
             <ul>
                 <li><Link to="/dashboard"><i className="fa fa-tachometer"></i> Dashboard</Link></li>
